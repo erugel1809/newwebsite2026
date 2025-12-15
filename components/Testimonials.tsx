@@ -41,6 +41,7 @@ const BrandLogo: React.FC<{ src: string }> = ({ src }) => (
     <img 
       src={src} 
       alt="Cliente" 
+      loading="lazy"
       className="h-16 w-auto object-contain opacity-50 group-hover/brand:opacity-100 grayscale group-hover/brand:grayscale-0 transition-all duration-500 filter brightness-200 invert-[0.1] hover:brightness-100 hover:invert-0"
     />
   </div>
@@ -80,7 +81,12 @@ export const Testimonials: React.FC = () => {
 
               <div className="flex items-center gap-4 mt-auto border-t border-white/5 pt-6">
                 <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10">
-                  <img src={item.image} alt={item.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+                  <img 
+                    src={item.image} 
+                    alt={item.name} 
+                    loading="lazy"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" 
+                  />
                 </div>
                 <div>
                   <h4 className="font-display text-lg text-white uppercase tracking-wide">{item.name}</h4>

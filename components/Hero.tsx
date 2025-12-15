@@ -27,7 +27,12 @@ export const Hero: React.FC = () => {
                 <div className="flex -space-x-2">
                    {[1,2,3].map(i => (
                       <div key={i} className="w-8 h-8 rounded-full border border-white bg-gray-300 overflow-hidden">
-                         <img src={`https://images.unsplash.com/photo-${1500000000000 + i}?w=50&h=50&fit=crop`} className="w-full h-full object-cover" />
+                         <img 
+                            src={`https://images.unsplash.com/photo-${1500000000000 + i}?w=50&h=50&fit=crop`} 
+                            className="w-full h-full object-cover" 
+                            loading="lazy" 
+                            alt="User"
+                         />
                       </div>
                    ))}
                 </div>
@@ -68,12 +73,16 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Person Image - Parallax Layer 2 (Mid) - CLICKABLE NOW */}
+              {/* Added priority loading for LCP */}
               <img 
                 src="http://elizabethrugel.com/wp-content/uploads/2025/05/DISENO-WEB-min-1.png" 
                 alt="Elizabeth Rugel Diseño Web" 
                 className="relative z-10 w-auto h-[60vh] lg:h-[75vh] object-contain object-bottom drop-shadow-2xl will-change-transform cursor-pointer hover:scale-[1.02] transition-transform duration-500"
                 style={{ mixBlendMode: 'normal', transform: `translateY(${scrollY * 0.1}px)` }}
                 onClick={() => setIsVideoOpen(true)}
+                // @ts-ignore
+                fetchPriority="high"
+                loading="eager"
               />
 
                {/* Bottom Text Layer - Parallax Layer 3 (Front/Back) */}

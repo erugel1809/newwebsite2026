@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowUpRight, Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { ArrowUpRight, Instagram, Facebook, Linkedin, Mail, Phone, MapPin, CreditCard } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   return (
@@ -57,37 +58,37 @@ export const Footer: React.FC = () => {
               </div>
            </div>
 
-           {/* Column 2: Services */}
+           {/* Column 2: Services (Text Only - No Links) */}
            <div>
-              <h4 className="font-display text-lg uppercase mb-6">Servicios</h4>
+              <h4 className="font-display text-lg uppercase mb-6">Nuestros Servicios</h4>
               <ul className="space-y-4 text-sm text-gray-400">
-                 <li><a href="#" className="hover:text-agency-red transition-colors">Diseño Web Corporativo</a></li>
-                 <li><a href="#" className="hover:text-agency-red transition-colors">E-commerce & Tiendas</a></li>
-                 <li><a href="#" className="hover:text-agency-red transition-colors">Catálogos Digitales</a></li>
-                 <li><a href="#" className="hover:text-agency-red transition-colors">Tarjetas de Presentación</a></li>
-                 <li><a href="#" className="hover:text-agency-red transition-colors">Branding & Identidad</a></li>
+                 <li><span className="cursor-default hover:text-white transition-colors">Diseño Web Corporativo</span></li>
+                 <li><span className="cursor-default hover:text-white transition-colors">E-commerce & Tiendas</span></li>
+                 <li><span className="cursor-default hover:text-white transition-colors">Catálogos Digitales</span></li>
+                 <li><span className="cursor-default hover:text-white transition-colors">Tarjetas de Presentación</span></li>
+                 <li><span className="cursor-default hover:text-white transition-colors">Branding & Identidad</span></li>
               </ul>
            </div>
 
-           {/* Column 3: Company */}
+           {/* Column 3: Menu (Matches Top Navbar) */}
            <div>
-              <h4 className="font-display text-lg uppercase mb-6">Agencia</h4>
+              <h4 className="font-display text-lg uppercase mb-6">Menú</h4>
               <ul className="space-y-4 text-sm text-gray-400">
-                 <li><a href="#" className="hover:text-agency-red transition-colors">Sobre Nosotros</a></li>
-                 <li><a href="#" className="hover:text-agency-red transition-colors">Portafolio</a></li>
-                 <li><a href="#" className="hover:text-agency-red transition-colors">Testimonios</a></li>
-                 <li><a href="#" className="hover:text-agency-red transition-colors">Preguntas Frecuentes</a></li>
-                 <li><a href="#" className="hover:text-agency-red transition-colors">Contacto</a></li>
+                 <li><Link to="/" className="hover:text-agency-red transition-colors">Inicio</Link></li>
+                 <li><Link to="/catalogo" className="hover:text-agency-red transition-colors">Servicios</Link></li>
+                 <li><Link to="/proyectos" className="hover:text-agency-red transition-colors">Portafolio</Link></li>
+                 <li><Link to="/herramientas" className="hover:text-agency-red transition-colors">Herramientas Gratuitas</Link></li>
+                 <li><Link to="/academia" className="hover:text-agency-red transition-colors">Academia Teckmark</Link></li>
               </ul>
            </div>
 
-           {/* Column 4: Contact */}
+           {/* Column 4: Contact & Payments */}
            <div>
               <h4 className="font-display text-lg uppercase mb-6">Contacto</h4>
-              <ul className="space-y-4 text-sm text-gray-400">
+              <ul className="space-y-4 text-sm text-gray-400 mb-8">
                  <li className="flex items-start gap-3">
                     <Mail size={16} className="text-agency-red mt-1" />
-                    <span>hola@elizabethrugel.com</span>
+                    <span>info@elizabethrugel.com</span>
                  </li>
                  <li className="flex items-start gap-3">
                     <Phone size={16} className="text-agency-red mt-1" />
@@ -98,6 +99,36 @@ export const Footer: React.FC = () => {
                     <span>Guayaquil, Ecuador <br/> Disponible Globalmente</span>
                  </li>
               </ul>
+
+              {/* Payment Methods */}
+              <div>
+                  <h5 className="font-display text-sm uppercase mb-4 flex items-center gap-2">
+                     <CreditCard size={14} className="text-agency-red"/>
+                     Pagos Aceptados
+                  </h5>
+                  <div className="flex flex-wrap gap-2">
+                     {/* Visa */}
+                     <div className="bg-white rounded px-2 py-1 h-8 flex items-center justify-center w-12">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" className="h-full w-full object-contain" />
+                     </div>
+                     {/* Mastercard */}
+                     <div className="bg-white rounded px-2 py-1 h-8 flex items-center justify-center w-12">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-full w-full object-contain" />
+                     </div>
+                     {/* Diners */}
+                     <div className="bg-white rounded px-2 py-1 h-8 flex items-center justify-center w-12">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Diners_Club_Logo3.svg" alt="Diners" className="h-full w-full object-contain" />
+                     </div>
+                     {/* Discover */}
+                     <div className="bg-white rounded px-2 py-1 h-8 flex items-center justify-center w-12">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Discover_Card_logo.svg" alt="Discover" className="h-full w-full object-contain" />
+                     </div>
+                     {/* Amex */}
+                     <div className="bg-white rounded px-2 py-1 h-8 flex items-center justify-center w-12">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg" alt="Amex" className="h-full w-full object-contain" />
+                     </div>
+                  </div>
+              </div>
            </div>
 
         </div>

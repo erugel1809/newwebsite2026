@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Check, Zap, Globe, ShoppingBag, Smartphone, Share2, Layers, MoveRight } from 'lucide-react';
+import { Check, Zap, Globe, ShoppingBag, Smartphone, Share2, Layers, MoveRight, MapPin } from 'lucide-react';
 
 const servicesDetail = [
   {
@@ -37,6 +37,15 @@ const servicesDetail = [
     features: ["Botón 'Guardar Contacto'", "Código QR Personalizado", "Enlaces a Redes Sociales", "Diseño Personalizable"],
     icon: Share2,
     image: "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=1200&fit=crop"
+  },
+  {
+    id: "05",
+    title: "Google SEO Local",
+    subtitle: "Visibilidad Geográfica",
+    description: "Aparece justo cuando te buscan. Optimizamos tu Perfil de Negocio de Google (antes Google My Business) para dominar las búsquedas locales y los mapas. Ideal para atraer clientes físicos a tu local.",
+    features: ["Ranking en Google Maps", "Gestión de Reseñas", "Publicaciones Semanales", "Estadísticas de Llamadas"],
+    icon: MapPin,
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&fit=crop"
   }
 ];
 
@@ -78,6 +87,7 @@ export const ServiceCatalog: React.FC = () => {
                   <img 
                      src={service.image} 
                      alt={service.title} 
+                     loading="lazy"
                      className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110 grayscale group-hover:grayscale-0"
                   />
                   

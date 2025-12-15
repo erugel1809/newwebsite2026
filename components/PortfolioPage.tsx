@@ -120,6 +120,7 @@ export const PortfolioPage: React.FC = () => {
                      <img 
                         src={project.image} 
                         alt={project.title} 
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                      />
                      <div className="absolute top-4 right-4 z-20 bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
