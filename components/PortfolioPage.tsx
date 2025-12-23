@@ -8,7 +8,7 @@ const projects = [
     id: 101,
     title: "ADN Web",
     category: "Web Corporativa",
-    image: "http://elizabethrugel.com/wp-content/uploads/2025/08/adnweb.png",
+    image: "https://elizabethrugel.com/wp-content/uploads/2025/08/adnweb.png",
     desc: "Diseño web corporativo moderno enfocado en la identidad de marca y presentación clara de servicios profesionales.",
     tags: ["Corporativo", "Identidad", "UX/UI"]
   },
@@ -16,7 +16,7 @@ const projects = [
     id: 102,
     title: "Cargo Ocean",
     category: "Web Corporativa",
-    image: "http://elizabethrugel.com/wp-content/uploads/2025/08/cargooceanweb-1.png",
+    image: "https://elizabethrugel.com/wp-content/uploads/2025/08/cargooceanweb-1.png",
     desc: "Plataforma digital para empresa de logística internacional, optimizada para presentar servicios de carga y transporte.",
     tags: ["Logística", "B2B", "Corporativo"]
   },
@@ -24,7 +24,7 @@ const projects = [
     id: 103,
     title: "Solutec",
     category: "Web Corporativa",
-    image: "http://elizabethrugel.com/wp-content/uploads/2025/08/solutec.png",
+    image: "https://elizabethrugel.com/wp-content/uploads/2025/08/solutec.png",
     desc: "Sitio web tecnológico para empresa de soluciones integrales, destacando innovación y soporte técnico.",
     tags: ["Tecnología", "Industrial", "Web"]
   },
@@ -32,7 +32,7 @@ const projects = [
     id: 104,
     title: "Dr. Roberto Silva",
     category: "Web Médicos",
-    image: "http://elizabethrugel.com/wp-content/uploads/2025/08/drroberto-1.png",
+    image: "https://elizabethrugel.com/wp-content/uploads/2025/08/drroberto-1.png",
     desc: "Sitio web profesional para especialista médico con integración de perfil profesional y contacto directo.",
     tags: ["Salud", "Medicina", "Marca Personal"]
   },
@@ -40,7 +40,7 @@ const projects = [
     id: 105,
     title: "Dra. Abigail",
     category: "Web Médicos",
-    image: "http://elizabethrugel.com/wp-content/uploads/2025/08/draabigail-1.png",
+    image: "https://elizabethrugel.com/wp-content/uploads/2025/08/draabigail-1.png",
     desc: "Diseño web médico con enfoque cálido y profesional, optimizado para generar confianza en pacientes.",
     tags: ["Pediatría", "Salud", "Web"]
   },
@@ -48,7 +48,7 @@ const projects = [
     id: 106,
     title: "Grupo Masuq",
     category: "Web Corporativa",
-    image: "http://elizabethrugel.com/wp-content/uploads/2025/08/masuq-1.png",
+    image: "https://elizabethrugel.com/wp-content/uploads/2025/08/masuq-1.png",
     desc: "Portal corporativo integral para presentación de portafolio de servicios y captación de clientes.",
     tags: ["Negocios", "Corporativo", "Servicios"]
   }

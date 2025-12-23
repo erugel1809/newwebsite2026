@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
            <div className="space-y-6">
               <div className="flex items-center gap-2">
                  <img 
-                   src="http://elizabethrugel.com/wp-content/uploads/2025/03/LOGO-BLANCO-350.png" 
+                   src="https://elizabethrugel.com/wp-content/uploads/2025/03/LOGO-BLANCO-350.png" 
                    alt="Elizabeth Rugel Logo" 
                    className="h-10 w-auto object-contain"
                  />
@@ -46,43 +46,46 @@ export const Footer: React.FC = () => {
                  Elevamos marcas a través de diseño estratégico y desarrollo web de alto rendimiento. Tu socio digital en Ecuador.
               </p>
               <div className="flex gap-4">
-                 <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-agency-red hover:border-agency-red hover:text-white transition-all">
+                 <a href="https://www.tiktok.com/@elizabeth.rugel" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-agency-red hover:border-agency-red hover:text-white transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                 </a>
+                 <a href="https://www.linkedin.com/in/elizabeth-rugel/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-agency-red hover:border-agency-red hover:text-white transition-all">
+                    <Linkedin size={18} />
+                 </a>
+                 <a href="https://www.instagram.com/elizabetrugel" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-agency-red hover:border-agency-red hover:text-white transition-all">
                     <Instagram size={18} />
                  </a>
-                 <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-agency-red hover:border-agency-red hover:text-white transition-all">
+                 <a href="https://www.facebook.com/elizabetrugel" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-agency-red hover:border-agency-red hover:text-white transition-all">
                     <Facebook size={18} />
-                 </a>
-                 <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-agency-red hover:border-agency-red hover:text-white transition-all">
-                    <Linkedin size={18} />
                  </a>
               </div>
            </div>
 
-           {/* Column 2: Services (Text Only - No Links) */}
+           {/* Column 2: Services */}
            <div>
               <h4 className="font-display text-lg uppercase mb-6">Nuestros Servicios</h4>
               <ul className="space-y-4 text-sm text-gray-400">
-                 <li><span className="cursor-default hover:text-white transition-colors">Diseño Web Corporativo</span></li>
-                 <li><span className="cursor-default hover:text-white transition-colors">E-commerce & Tiendas</span></li>
-                 <li><span className="cursor-default hover:text-white transition-colors">Catálogos Digitales</span></li>
-                 <li><span className="cursor-default hover:text-white transition-colors">Tarjetas de Presentación</span></li>
-                 <li><span className="cursor-default hover:text-white transition-colors">Branding & Identidad</span></li>
+                 <li><Link to="/catalogo" className="hover:text-white transition-colors">Diseño Web Corporativo</Link></li>
+                 <li><Link to="/catalogo" className="hover:text-white transition-colors">E-commerce & Tiendas</Link></li>
+                 <li><Link to="/catalogo" className="hover:text-white transition-colors">Catálogos Digitales</Link></li>
+                 <li><Link to="/catalogo" className="hover:text-white transition-colors">Tarjetas de Presentación</Link></li>
+                 <li><Link to="/blog" className="hover:text-white transition-colors">Estrategia & Blog</Link></li>
               </ul>
            </div>
 
-           {/* Column 3: Menu (Matches Top Navbar) */}
+           {/* Column 3: Menu */}
            <div>
               <h4 className="font-display text-lg uppercase mb-6">Menú</h4>
               <ul className="space-y-4 text-sm text-gray-400">
                  <li><Link to="/" className="hover:text-agency-red transition-colors">Inicio</Link></li>
                  <li><Link to="/catalogo" className="hover:text-agency-red transition-colors">Servicios</Link></li>
                  <li><Link to="/proyectos" className="hover:text-agency-red transition-colors">Portafolio</Link></li>
-                 <li><Link to="/herramientas" className="hover:text-agency-red transition-colors">Herramientas Gratuitas</Link></li>
-                 <li><Link to="/academia" className="hover:text-agency-red transition-colors">Academia Teckmark</Link></li>
+                 <li><Link to="/blog" className="hover:text-agency-red transition-colors">Blog</Link></li>
+                 <li><Link to="/herramientas" className="hover:text-agency-red transition-colors">Herramientas</Link></li>
               </ul>
            </div>
 
-           {/* Column 4: Contact & Payments */}
+           {/* Column 4: Contact */}
            <div>
               <h4 className="font-display text-lg uppercase mb-6">Contacto</h4>
               <ul className="space-y-4 text-sm text-gray-400 mb-8">
@@ -96,36 +99,24 @@ export const Footer: React.FC = () => {
                  </li>
                  <li className="flex items-start gap-3">
                     <MapPin size={16} className="text-agency-red mt-1" />
-                    <span>Guayaquil, Ecuador <br/> Disponible Globalmente</span>
+                    <span>Guayaquil, Ecuador</span>
                  </li>
               </ul>
 
-              {/* Payment Methods */}
               <div>
                   <h5 className="font-display text-sm uppercase mb-4 flex items-center gap-2">
                      <CreditCard size={14} className="text-agency-red"/>
                      Pagos Aceptados
                   </h5>
-                  <div className="flex flex-wrap gap-2">
-                     {/* Visa */}
-                     <div className="bg-white rounded px-2 py-1 h-8 flex items-center justify-center w-12">
+                  <div className="flex flex-wrap gap-2 opacity-70">
+                     <div className="bg-white rounded px-2 py-1 h-6 w-10 flex items-center justify-center">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" className="h-full w-full object-contain" />
                      </div>
-                     {/* Mastercard */}
-                     <div className="bg-white rounded px-2 py-1 h-8 flex items-center justify-center w-12">
+                     <div className="bg-white rounded px-2 py-1 h-6 w-10 flex items-center justify-center">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-full w-full object-contain" />
                      </div>
-                     {/* Diners */}
-                     <div className="bg-white rounded px-2 py-1 h-8 flex items-center justify-center w-12">
+                     <div className="bg-white rounded px-2 py-1 h-6 w-10 flex items-center justify-center">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Diners_Club_Logo3.svg" alt="Diners" className="h-full w-full object-contain" />
-                     </div>
-                     {/* Discover */}
-                     <div className="bg-white rounded px-2 py-1 h-8 flex items-center justify-center w-12">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Discover_Card_logo.svg" alt="Discover" className="h-full w-full object-contain" />
-                     </div>
-                     {/* Amex */}
-                     <div className="bg-white rounded px-2 py-1 h-8 flex items-center justify-center w-12">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg" alt="Amex" className="h-full w-full object-contain" />
                      </div>
                   </div>
               </div>
@@ -137,8 +128,8 @@ export const Footer: React.FC = () => {
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600 uppercase tracking-wider">
            <p>© 2026 Elizabeth Rugel. Todos los derechos reservados.</p>
            <div className="flex gap-8">
-              <a href="#" className="hover:text-white transition-colors">Política de Privacidad</a>
-              <a href="#" className="hover:text-white transition-colors">Términos y Condiciones</a>
+              <Link to="/privacidad" className="hover:text-white transition-colors">Privacidad</Link>
+              <Link to="/terminos" className="hover:text-white transition-colors">Términos</Link>
            </div>
         </div>
 

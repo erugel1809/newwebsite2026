@@ -10,12 +10,16 @@ import { FAQ } from './components/FAQ';
 import { About } from './components/About';
 import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
+import { BlogHomeSection } from './components/BlogHomeSection';
 
 // Lazy load page components to split the bundle
 const ServiceCatalog = lazy(() => import('./components/ServiceCatalog').then(module => ({ default: module.ServiceCatalog })));
 const PortfolioPage = lazy(() => import('./components/PortfolioPage').then(module => ({ default: module.PortfolioPage })));
 const FreeTools = lazy(() => import('./components/FreeTools').then(module => ({ default: module.FreeTools })));
 const Academy = lazy(() => import('./components/Academy').then(module => ({ default: module.Academy })));
+const ImageCompressorTool = lazy(() => import('./components/ImageCompressorTool').then(module => ({ default: module.ImageCompressorTool })));
+const BlogPage = lazy(() => import('./components/BlogPage').then(module => ({ default: module.BlogPage })));
+const BlogPostDetail = lazy(() => import('./components/BlogPostDetail').then(module => ({ default: module.BlogPostDetail })));
 
 // Loading Spinner for route transitions
 const PageLoader = () => (
@@ -41,6 +45,7 @@ function App() {
                 <About />
                 <Services />
                 <PortfolioArc />
+                <BlogHomeSection />
                 <Testimonials />
                 <FAQ />
               </>
@@ -48,7 +53,10 @@ function App() {
             <Route path="/catalogo" element={<ServiceCatalog />} />
             <Route path="/proyectos" element={<PortfolioPage />} />
             <Route path="/herramientas" element={<FreeTools />} />
+            <Route path="/herramientas/compresor" element={<ImageCompressorTool />} />
             <Route path="/academia" element={<Academy />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostDetail />} />
           </Routes>
         </Suspense>
         <Footer />

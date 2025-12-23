@@ -27,13 +27,13 @@ const testimonials = [
 
 // Client Logos
 const brands = [
-  "http://elizabethrugel.com/wp-content/uploads/2025/03/1.png",
-  "http://elizabethrugel.com/wp-content/uploads/2025/03/2.png",
-  "http://elizabethrugel.com/wp-content/uploads/2025/03/3.png",
-  "http://elizabethrugel.com/wp-content/uploads/2025/03/4.png",
-  "http://elizabethrugel.com/wp-content/uploads/2025/03/5.png",
-  "http://elizabethrugel.com/wp-content/uploads/2025/03/6.png",
-  "http://elizabethrugel.com/wp-content/uploads/2025/03/7.png"
+  "https://elizabethrugel.com/wp-content/uploads/2025/03/1.png",
+  "https://elizabethrugel.com/wp-content/uploads/2025/03/2.png",
+  "https://elizabethrugel.com/wp-content/uploads/2025/03/3.png",
+  "https://elizabethrugel.com/wp-content/uploads/2025/03/4.png",
+  "https://elizabethrugel.com/wp-content/uploads/2025/03/5.png",
+  "https://elizabethrugel.com/wp-content/uploads/2025/03/6.png",
+  "https://elizabethrugel.com/wp-content/uploads/2025/03/7.png"
 ];
 
 const BrandLogo: React.FC<{ src: string }> = ({ src }) => (

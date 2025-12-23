@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Image, FileSpreadsheet, FileText, ArrowRightLeft, ArrowUpRight, Sparkles, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const FreeTools: React.FC = () => {
   useEffect(() => {
@@ -31,12 +32,12 @@ export const FreeTools: React.FC = () => {
             {/* Grid */}
             <div className="grid md:grid-cols-2 gap-6 mb-24">
                 
-                {/* Tool 1 */}
+                {/* Tool 1 - INTERNAL LINK */}
                 <ToolCard 
                     title="Compresor de Imágenes"
                     desc="Reduce el peso de tus imágenes JPG, PNG y WebP hasta un 80% sin sacrificar la calidad visual. Vital para SEO."
                     features={["Compresión IA", "Formato WebP", "Sin Marcas de Agua"]}
-                    link="https://elizabethrugel.com/eli-compressor/"
+                    link="/herramientas/compresor"
                     btnText="Comprimir Ahora"
                     icon={Image}
                 />
@@ -113,45 +114,59 @@ interface ToolCardProps {
     icon: React.ElementType;
 }
 
-const ToolCard: React.FC<ToolCardProps> = ({ title, desc, features, link, btnText, icon: Icon }) => (
-    <div className="group relative bg-[#0a0a0a] border border-white/10 rounded-xl p-8 hover:border-agency-red/50 transition-all duration-500 flex flex-col hover:-translate-y-1">
-        
-        {/* Hover Background subtle red */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
+const ToolCard: React.FC<ToolCardProps> = ({ title, desc, features, link, btnText, icon: Icon }) => {
+    // Check if the link is internal (starts with /)
+    const isInternal = link.startsWith('/');
 
-        <div className="relative z-10 flex flex-col h-full">
-            <div className="flex justify-between items-start mb-6">
-                <div className="w-12 h-12 rounded-lg bg-agency-gray border border-white/10 flex items-center justify-center text-white group-hover:text-agency-red group-hover:border-agency-red/50 transition-colors duration-300">
-                    <Icon size={24} />
+    return (
+        <div className="group relative bg-[#0a0a0a] border border-white/10 rounded-xl p-8 hover:border-agency-red/50 transition-all duration-500 flex flex-col hover:-translate-y-1">
+            
+            {/* Hover Background subtle red */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
+
+            <div className="relative z-10 flex flex-col h-full">
+                <div className="flex justify-between items-start mb-6">
+                    <div className="w-12 h-12 rounded-lg bg-agency-gray border border-white/10 flex items-center justify-center text-white group-hover:text-agency-red group-hover:border-agency-red/50 transition-colors duration-300">
+                        <Icon size={24} />
+                    </div>
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-2 group-hover:translate-x-0">
+                        <ArrowUpRight size={20} className="text-agency-red" />
+                    </div>
                 </div>
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-2 group-hover:translate-x-0">
-                    <ArrowUpRight size={20} className="text-agency-red" />
+                
+                <h3 className="text-2xl font-display uppercase text-white mb-3 tracking-wide">{title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                    {desc}
+                </p>
+                
+                <div className="mb-8 mt-auto pt-6 border-t border-white/5">
+                    <div className="flex flex-wrap gap-3">
+                        {features.map((f, i) => (
+                            <span key={i} className="text-[10px] font-bold uppercase tracking-wider text-white/60 bg-white/5 px-2 py-1 rounded border border-white/5 group-hover:border-white/10 transition-colors">
+                                {f}
+                            </span>
+                        ))}
+                    </div>
                 </div>
+                
+                {isInternal ? (
+                     <Link
+                        to={link}
+                        className="w-full block text-center border border-white/20 text-white hover:bg-agency-red hover:border-agency-red hover:text-white py-3 rounded-full font-bold uppercase tracking-widest text-xs transition-all duration-300"
+                    >
+                        {btnText}
+                    </Link>
+                ) : (
+                    <a 
+                        href={link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="w-full block text-center border border-white/20 text-white hover:bg-agency-red hover:border-agency-red hover:text-white py-3 rounded-full font-bold uppercase tracking-widest text-xs transition-all duration-300"
+                    >
+                        {btnText}
+                    </a>
+                )}
             </div>
-            
-            <h3 className="text-2xl font-display uppercase text-white mb-3 tracking-wide">{title}</h3>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                {desc}
-            </p>
-            
-            <div className="mb-8 mt-auto pt-6 border-t border-white/5">
-                <div className="flex flex-wrap gap-3">
-                    {features.map((f, i) => (
-                        <span key={i} className="text-[10px] font-bold uppercase tracking-wider text-white/60 bg-white/5 px-2 py-1 rounded border border-white/5 group-hover:border-white/10 transition-colors">
-                            {f}
-                        </span>
-                    ))}
-                </div>
-            </div>
-            
-            <a 
-                href={link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-full block text-center border border-white/20 text-white hover:bg-agency-red hover:border-agency-red hover:text-white py-3 rounded-full font-bold uppercase tracking-widest text-xs transition-all duration-300"
-            >
-                {btnText}
-            </a>
         </div>
-    </div>
-);
+    );
+};

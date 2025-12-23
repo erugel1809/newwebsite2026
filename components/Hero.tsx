@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Play, Sparkles, X } from 'lucide-react';
 
+const heroLogos = [
+  "https://elizabethrugel.com/wp-content/uploads/2025/03/1.png",
+  "https://elizabethrugel.com/wp-content/uploads/2025/03/2.png",
+  "https://elizabethrugel.com/wp-content/uploads/2025/03/3.png"
+];
+
 export const Hero: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -24,14 +30,15 @@ export const Hero: React.FC = () => {
           {/* Left Stats Column */}
           <div className="col-span-2 hidden lg:flex flex-col justify-center gap-8 text-white">
              <div className="flex items-center gap-2 mb-8">
-                <div className="flex -space-x-2">
-                   {[1,2,3].map(i => (
-                      <div key={i} className="w-8 h-8 rounded-full border border-white bg-gray-300 overflow-hidden">
+                <div className="flex -space-x-4 hover:space-x-1 transition-all duration-300">
+                   {heroLogos.map((src, i) => (
+                      <div key={i} className="w-12 h-12 rounded-full border border-white/20 bg-agency-black overflow-hidden flex items-center justify-center relative z-10 group cursor-default">
                          <img 
-                            src={`https://images.unsplash.com/photo-${1500000000000 + i}?w=50&h=50&fit=crop`} 
-                            className="w-full h-full object-cover" 
+                            src={src} 
+                            // Filtro invert para volver blancos los logos negros, y brightness para resaltar
+                            className="w-full h-full object-contain p-2 filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-all" 
                             loading="lazy" 
-                            alt="User"
+                            alt="Cliente Confiable"
                          />
                       </div>
                    ))}
@@ -75,7 +82,7 @@ export const Hero: React.FC = () => {
               {/* Person Image - Parallax Layer 2 (Mid) - CLICKABLE NOW */}
               {/* Added priority loading for LCP */}
               <img 
-                src="http://elizabethrugel.com/wp-content/uploads/2025/05/DISENO-WEB-min-1.png" 
+                src="https://elizabethrugel.com/wp-content/uploads/2025/05/DISENO-WEB-min-1.png" 
                 alt="Elizabeth Rugel Diseño Web" 
                 className="relative z-10 w-auto h-[60vh] lg:h-[75vh] object-contain object-bottom drop-shadow-2xl will-change-transform cursor-pointer hover:scale-[1.02] transition-transform duration-500"
                 style={{ mixBlendMode: 'normal', transform: `translateY(${scrollY * 0.1}px)` }}
@@ -141,7 +148,7 @@ export const Hero: React.FC = () => {
               onClick={(e) => e.stopPropagation()}
             >
                <video 
-                  src="http://elizabethrugel.com/wp-content/uploads/2025/04/Presencia-digital.mp4" 
+                  src="https://elizabethrugel.com/wp-content/uploads/2025/04/Presencia-digital.mp4" 
                   controls 
                   autoPlay 
                   className="w-full h-full object-cover"

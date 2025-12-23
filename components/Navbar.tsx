@@ -7,7 +7,6 @@ export const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Cambia el estado si el usuario baja más de 20px
       setIsScrolled(window.scrollY > 20);
     };
 
@@ -26,9 +25,8 @@ export const Navbar: React.FC = () => {
       {/* Logo */}
       <Link to="/" className="flex items-center gap-2">
         <img 
-          src="http://elizabethrugel.com/wp-content/uploads/2025/03/LOGO-BLANCO-350.png" 
+          src="https://elizabethrugel.com/wp-content/uploads/2025/03/LOGO-BLANCO-350.png" 
           alt="Elizabeth Rugel Logo" 
-          // Logo más pequeño: h-8 (32px) por defecto, h-10 (40px) solo en desktop cuando está arriba del todo
           className={`w-auto object-contain transition-all duration-300 ${
             isScrolled ? 'h-6 md:h-8' : 'h-8 md:h-10'
           }`}
@@ -40,8 +38,9 @@ export const Navbar: React.FC = () => {
         <Link to="/" className="hover:text-agency-red transition-colors">Inicio</Link>
         <Link to="/catalogo" className="hover:text-agency-red transition-colors">Servicios</Link>
         <Link to="/proyectos" className="hover:text-agency-red transition-colors">Portafolio</Link>
-        <Link to="/herramientas" className="hover:text-agency-red transition-colors">Herramientas Gratuitas</Link>
-        <Link to="/academia" className="hover:text-agency-red transition-colors">Academia Teckmark</Link>
+        <Link to="/blog" className="hover:text-agency-red transition-colors">Blog</Link>
+        <Link to="/herramientas" className="hover:text-agency-red transition-colors">Herramientas</Link>
+        <Link to="/academia" className="hover:text-agency-red transition-colors">Academia</Link>
       </div>
 
       {/* Right Button */}

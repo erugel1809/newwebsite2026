@@ -45,7 +45,7 @@ export const About: React.FC = () => {
                             playsInline 
                             className="w-full h-full object-cover"
                         >
-                            <source src="http://elizabethrugel.com/wp-content/uploads/2025/04/Presencia-digital.mp4" type="video/mp4" />
+                            <source src="https://elizabethrugel.com/wp-content/uploads/2025/04/Presencia-digital.mp4" type="video/mp4" />
                         </video>
                         
                         {/* Audio Toggle Button */}

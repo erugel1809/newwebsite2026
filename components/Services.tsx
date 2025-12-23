@@ -32,14 +32,14 @@ export const Services: React.FC = () => {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
            
-           {/* Card 1: Presencia Digital (Background: Tecnicento) */}
+           {/* Card 1: Presencia Digital (Masuq) */}
            <div className="bg-[#0a0a0a] rounded-lg group hover:bg-[#111] transition-all flex flex-col justify-between min-h-[350px] border border-white/5 relative overflow-hidden">
               {/* Background Image */}
               <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-500">
                   <img 
-                    src="http://elizabethrugel.com/wp-content/uploads/2025/03/tecnicento-600x589-min.jpg" 
+                    src="https://elizabethrugel.com/wp-content/uploads/2025/08/masuq-1.png" 
                     alt="Presencia Digital" 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 object-center"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
               </div>
@@ -90,14 +90,14 @@ export const Services: React.FC = () => {
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-black/10 rounded-full blur-2xl pointer-events-none"></div>
            </div>
 
-           {/* Card 3: Tech & Support (Background: ADN Web) */}
+           {/* Card 3: Tech & Support (ADN Web) */}
            <div className="bg-[#0a0a0a] rounded-lg group hover:bg-[#111] transition-all flex flex-col justify-between min-h-[350px] border border-white/5 relative overflow-hidden">
               {/* Background Image */}
               <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-500">
                   <img 
-                    src="http://elizabethrugel.com/wp-content/uploads/2025/08/adnweb.png" 
+                    src="https://elizabethrugel.com/wp-content/uploads/2025/08/adnweb.png" 
                     alt="Soporte y Tecnología" 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 object-top"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 object-center"
                   />
                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
               </div>

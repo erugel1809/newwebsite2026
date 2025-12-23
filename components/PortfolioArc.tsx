@@ -3,12 +3,12 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const portfolioItems = [
-  "http://elizabethrugel.com/wp-content/uploads/2025/08/adnweb.png",
-  "http://elizabethrugel.com/wp-content/uploads/2025/08/cargooceanweb-1.png",
-  "http://elizabethrugel.com/wp-content/uploads/2025/08/solutec.png",
-  "http://elizabethrugel.com/wp-content/uploads/2025/08/drroberto-1.png",
-  "http://elizabethrugel.com/wp-content/uploads/2025/08/draabigail-1.png",
-  "http://elizabethrugel.com/wp-content/uploads/2025/08/masuq-1.png"
+  "https://elizabethrugel.com/wp-content/uploads/2025/08/adnweb.png",
+  "https://elizabethrugel.com/wp-content/uploads/2025/08/cargooceanweb-1.png",
+  "https://elizabethrugel.com/wp-content/uploads/2025/08/solutec.png",
+  "https://elizabethrugel.com/wp-content/uploads/2025/08/drroberto-1.png",
+  "https://elizabethrugel.com/wp-content/uploads/2025/08/draabigail-1.png",
+  "https://elizabethrugel.com/wp-content/uploads/2025/08/masuq-1.png"
 ];
 
 // Triple items for the carousel to ensure seamless infinite scroll on wide screens

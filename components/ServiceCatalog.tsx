@@ -9,7 +9,7 @@ const servicesDetail = [
     description: "Diseñamos la sede digital de tu empresa. No es solo información, es persuasión. Estructuramos tu sitio para generar confianza inmediata, optimizando cada sección para convertir visitantes en clientes potenciales.",
     features: ["Diseño UX/UI Premium", "Optimización SEO Técnica", "Carga Ultra-Rápida", "Integración con CRM"],
     icon: Globe,
-    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200&fit=crop"
+    image: "https://elizabethrugel.com/wp-content/uploads/2025/12/web-design.jpg"
   },
   {
     id: "02",
@@ -18,16 +18,16 @@ const servicesDetail = [
     description: "Tu tienda nunca cierra. Desarrollamos plataformas de comercio electrónico robustas, seguras y fáciles de administrar. Desde la gestión de inventario hasta pasarelas de pago locales en Ecuador.",
     features: ["Pasarelas de Pago Locales", "Gestión de Inventario", "Panel Administrativo Fácil", "Notificaciones Automáticas"],
     icon: ShoppingBag,
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=1200&fit=crop"
+    image: "http://elizabethrugel.com/wp-content/uploads/2025/12/dreamina-2025-12-15-4996-colocar-la-primera-imagen-en-la-pantalla.-min.jpeg"
   },
   {
     id: "03",
     title: "Catálogos Interactivos",
     subtitle: "Experiencia & Facilidad",
     description: "Olvídate de los PDFs pesados. Nuestros catálogos web permiten a tus clientes navegar, filtrar y pedir productos directamente por WhatsApp. Una herramienta de venta ágil para equipos comerciales.",
-    features: ["Pedidos por WhatsApp", "Filtrado de Productos", "Actualización en Tiempo Real", "Sin descargas de Apps"],
+    features: ["Pedidos por WhatsApp", "Sin descargas de Apps"],
     icon: Layers,
-    image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=1200&fit=crop"
+    image: "http://elizabethrugel.com/wp-content/uploads/2025/12/dreamina-2025-12-15-5890-ccoloca-la-segunda-imagen-en-la-pantalla.jpeg"
   },
   {
     id: "04",
@@ -36,7 +36,7 @@ const servicesDetail = [
     description: "La evolución de la tarjeta de presentación. Un micro-sitio personal donde compartes contacto, redes, portafolio y ubicación con un solo clic. Ideal para cerrar tratos en el momento.",
     features: ["Botón 'Guardar Contacto'", "Código QR Personalizado", "Enlaces a Redes Sociales", "Diseño Personalizable"],
     icon: Share2,
-    image: "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=1200&fit=crop"
+    image: "http://elizabethrugel.com/wp-content/uploads/2025/12/dreamina-2025-12-15-1585-ccoloca-la-segunda-imagen-en-la-pantalla.-min.jpeg"
   },
   {
     id: "05",
@@ -45,7 +45,7 @@ const servicesDetail = [
     description: "Aparece justo cuando te buscan. Optimizamos tu Perfil de Negocio de Google (antes Google My Business) para dominar las búsquedas locales y los mapas. Ideal para atraer clientes físicos a tu local.",
     features: ["Ranking en Google Maps", "Gestión de Reseñas", "Publicaciones Semanales", "Estadísticas de Llamadas"],
     icon: MapPin,
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&fit=crop"
+    image: "http://elizabethrugel.com/wp-content/uploads/2025/12/Gemini_Generated_Image_eatrqheatrqheatr-min-1.png"
   }
 ];
 
@@ -88,7 +88,7 @@ export const ServiceCatalog: React.FC = () => {
                      src={service.image} 
                      alt={service.title} 
                      loading="lazy"
-                     className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110 grayscale group-hover:grayscale-0"
+                     className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110 grayscale group-hover:grayscale-0 object-center"
                   />
                   
                   {/* Floating Number - Parallax feel */}
