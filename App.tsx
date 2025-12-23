@@ -18,6 +18,9 @@ const PortfolioPage = lazy(() => import('./components/PortfolioPage').then(modul
 const FreeTools = lazy(() => import('./components/FreeTools').then(module => ({ default: module.FreeTools })));
 const Academy = lazy(() => import('./components/Academy').then(module => ({ default: module.Academy })));
 const ImageCompressorTool = lazy(() => import('./components/ImageCompressorTool').then(module => ({ default: module.ImageCompressorTool })));
+const CsvExtractorTool = lazy(() => import('./components/CsvExtractorTool').then(module => ({ default: module.CsvExtractorTool })));
+const PdfCompressorTool = lazy(() => import('./components/PdfCompressorTool').then(module => ({ default: module.PdfCompressorTool })));
+const UniversalConverterTool = lazy(() => import('./components/UniversalConverterTool').then(module => ({ default: module.UniversalConverterTool })));
 const BlogPage = lazy(() => import('./components/BlogPage').then(module => ({ default: module.BlogPage })));
 const BlogPostDetail = lazy(() => import('./components/BlogPostDetail').then(module => ({ default: module.BlogPostDetail })));
 
@@ -54,6 +57,9 @@ function App() {
             <Route path="/proyectos" element={<PortfolioPage />} />
             <Route path="/herramientas" element={<FreeTools />} />
             <Route path="/herramientas/compresor" element={<ImageCompressorTool />} />
+            <Route path="/herramientas/csv" element={<CsvExtractorTool />} />
+            <Route path="/herramientas/pdf" element={<PdfCompressorTool />} />
+            <Route path="/herramientas/conversor" element={<UniversalConverterTool />} />
             <Route path="/academia" element={<Academy />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostDetail />} />

@@ -32,7 +32,7 @@ export const FreeTools: React.FC = () => {
             {/* Grid */}
             <div className="grid md:grid-cols-2 gap-6 mb-24">
                 
-                {/* Tool 1 - INTERNAL LINK */}
+                {/* Tool 1 - Compresor */}
                 <ToolCard 
                     title="Compresor de Imágenes"
                     desc="Reduce el peso de tus imágenes JPG, PNG y WebP hasta un 80% sin sacrificar la calidad visual. Vital para SEO."
@@ -42,32 +42,32 @@ export const FreeTools: React.FC = () => {
                     icon={Image}
                 />
 
-                {/* Tool 2 */}
+                {/* Tool 2 - Extractor CSV */}
                 <ToolCard 
                     title="Extractor CSV"
                     desc="Limpia, filtra y organiza grandes volúmenes de datos. Convierte texto desordenado en tablas listas para Excel."
                     features={["Limpieza de Datos", "Exportación Rápida", "Vista Previa"]}
-                    link="https://elizabethrugel.com/eli-csv-extractor/"
+                    link="/herramientas/csv"
                     btnText="Extraer Datos"
                     icon={FileSpreadsheet}
                 />
 
-                {/* Tool 3 */}
+                {/* Tool 3 - Compresor de PDF */}
                 <ToolCard 
                    title="Compresor de PDF"
                    desc="Optimiza documentos PDF para enviarlos por correo o publicarlos en web. Mantiene la legibilidad del texto."
                    features={["Alta Compresión", "Seguridad Total", "Procesamiento Rápido"]}
-                   link="https://elizabethrugel.com/eli-pdf-compress/"
+                   link="/herramientas/pdf"
                    btnText="Optimizar PDF"
                    icon={FileText}
                 />
 
-                {/* Tool 4 */}
+                {/* Tool 4 - Conversor Universal (AHORA INTERNO) */}
                 <ToolCard 
                    title="Conversor Universal"
                    desc="Transforma unidades de medida al instante. Longitud, peso, temperatura y monedas en una interfaz minimalista."
                    features={["500+ Unidades", "Conversión Moneda", "Cálculo Real"]}
-                   link="https://elizabethrugel.com/eli-convert/"
+                   link="/herramientas/conversor"
                    btnText="Convertir Unidades"
                    icon={ArrowRightLeft}
                 />

@@ -11,17 +11,15 @@ const portfolioItems = [
   "https://elizabethrugel.com/wp-content/uploads/2025/08/masuq-1.png"
 ];
 
-// Triple items for the carousel to ensure seamless infinite scroll on wide screens
 const carouselItems = [...portfolioItems, ...portfolioItems, ...portfolioItems];
 
 export const PortfolioArc: React.FC = () => {
   return (
-    <section className="relative bg-agency-black min-h-screen overflow-hidden flex flex-col justify-between">
+    <section className="relative bg-agency-black min-h-screen overflow-hidden flex flex-col justify-between content-visibility-auto">
       
       {/* Background Gradients */}
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-agency-red/10 via-agency-black to-agency-black pointer-events-none" />
 
-      {/* Spacer to push content down */}
       <div className="flex-1"></div>
 
       {/* Main Content Layer */}
@@ -30,11 +28,11 @@ export const PortfolioArc: React.FC = () => {
             Portafolio <br/> <span className="text-agency-red">Exclusivo</span>
          </h2>
          <p className="text-gray-400 mb-10 max-w-xl text-sm md:text-base leading-relaxed">
-            Colaboramos para crear marcas audaces y experiencias digitales fluidas. Explora nuestra selección de proyectos recientes.
+            Diseñamos experiencias digitales fluidas y memorables. Descubre nuestra selección de proyectos web realizados en Ecuador.
          </p>
          
          <Link to="/proyectos">
-            <button className="group bg-agency-red text-white hover:bg-white hover:text-black px-10 py-4 rounded-full font-bold uppercase tracking-widest transition-all duration-300 flex items-center gap-3 shadow-[0_0_20px_rgba(230,0,0,0.4)]">
+            <button className="group bg-agency-red text-white hover:bg-white hover:text-black px-10 py-4 rounded-full font-bold uppercase tracking-widest transition-all duration-300 flex items-center gap-3 shadow-[0_0_20px_rgba(230,0,0,0.4)] active-scale">
                 <span>Ver Proyectos</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
@@ -44,15 +42,15 @@ export const PortfolioArc: React.FC = () => {
       {/* Bottom Carousel Strip */}
       <div className="relative z-20 w-full bg-black/40 border-t border-white/5 py-8 backdrop-blur-md overflow-hidden">
         <div className="flex w-max animate-marquee-scroll pause-on-hover hover:cursor-grab">
-           {/* First Set */}
-           <div className="flex gap-8 px-4">
+           <div className="flex gap-4 md:gap-8 px-4">
               {carouselItems.map((src, idx) => (
-                 <div key={`set1-${idx}`} className="w-64 h-40 flex-shrink-0 rounded-lg overflow-hidden border border-white/10 group/item relative shadow-lg">
+                 <div key={`set1-${idx}`} className="w-48 h-32 md:w-64 md:h-40 flex-shrink-0 rounded-lg overflow-hidden border border-white/10 group/item relative shadow-lg">
                     <img 
                       src={src} 
                       className="w-full h-full object-cover transition-transform duration-500 group-hover/item:scale-105 grayscale group-hover/item:grayscale-0" 
-                      alt={`Project ${idx}`}
+                      alt={`Proyecto de diseño web #${idx + 1}`}
                       loading="lazy"
+                      decoding="async"
                       width="256"
                       height="160"
                     />
@@ -60,15 +58,15 @@ export const PortfolioArc: React.FC = () => {
                  </div>
               ))}
            </div>
-           {/* Second Set (Duplicate for seamless loop) */}
-           <div className="flex gap-8 px-4">
+           <div className="flex gap-4 md:gap-8 px-4">
               {carouselItems.map((src, idx) => (
-                 <div key={`set2-${idx}`} className="w-64 h-40 flex-shrink-0 rounded-lg overflow-hidden border border-white/10 group/item relative shadow-lg">
+                 <div key={`set2-${idx}`} className="w-48 h-32 md:w-64 md:h-40 flex-shrink-0 rounded-lg overflow-hidden border border-white/10 group/item relative shadow-lg">
                     <img 
                       src={src} 
                       className="w-full h-full object-cover transition-transform duration-500 group-hover/item:scale-105 grayscale group-hover/item:grayscale-0" 
-                      alt={`Project ${idx}`} 
+                      alt={`Proyecto de diseño web #${idx + 1}`} 
                       loading="lazy"
+                      decoding="async"
                       width="256"
                       height="160"
                     />

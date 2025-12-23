@@ -30,7 +30,7 @@ const projects = [
   },
   {
     id: 104,
-    title: "Dr. Roberto Silva",
+    title: "Dr. Roberto Cedeño",
     category: "Web Médicos",
     image: "https://elizabethrugel.com/wp-content/uploads/2025/08/drroberto-1.png",
     desc: "Sitio web profesional para especialista médico con integración de perfil profesional y contacto directo.",
@@ -38,7 +38,7 @@ const projects = [
   },
   {
     id: 105,
-    title: "Dra. Abigail",
+    title: "Dra. Abigail Segura",
     category: "Web Médicos",
     image: "https://elizabethrugel.com/wp-content/uploads/2025/08/draabigail-1.png",
     desc: "Diseño web médico con enfoque cálido y profesional, optimizado para generar confianza en pacientes.",

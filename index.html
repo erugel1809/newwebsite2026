@@ -2,14 +2,82 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Elizabeth Rugel: Diseño de Sitios Web, E-commerce, Catálogos Digitales y Tarjetas de Presentación en Ecuador. Diseño Digital de alto impacto." />
-    <meta name="keywords" content="diseño web ecuador, ecommerce ecuador, catalogos digitales, tarjetas de presentacion digitales, diseño digital, branding, elizabeth rugel" />
-    <title>Elizabeth Rugel | Diseño Web y Diseño Digital Ecuador</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- SEO Básico -->
+    <title>Elizabeth Rugel | Diseño Web Profesional y E-commerce en Ecuador</title>
+    <meta name="description" content="Agencia boutique liderada por Elizabeth Rugel. Especialistas en Diseño Web, E-commerce y Catálogos Digitales en Ecuador con +20 años de experiencia. ¡Cotiza hoy!" />
+    <meta name="keywords" content="diseño web ecuador, diseño web guayaquil, diseño web quito, ecommerce ecuador, catalogos digitales whatsapp, tarjetas digitales" />
+    <meta name="author" content="Elizabeth Rugel" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://elizabethrugel.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elizabethrugel.com/" />
+    <meta property="og:title" content="Elizabeth Rugel | Diseño Web y Estrategia Digital en Ecuador" />
+    <meta property="og:description" content="Transformamos tu negocio con diseño web de alto impacto y estrategias de conversión probadas." />
+    <meta property="og:image" content="https://elizabethrugel.com/wp-content/uploads/2025/05/DISENO-WEB-min-1.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://elizabethrugel.com/" />
+    <meta property="twitter:title" content="Elizabeth Rugel | Diseño Web en Ecuador" />
+    <meta property="twitter:description" content="Expertos en E-commerce y Catálogos Digitales para el mercado ecuatoriano." />
+    <meta property="twitter:image" content="https://elizabethrugel.com/wp-content/uploads/2025/05/DISENO-WEB-min-1.png" />
+
+    <!-- Preload de Recursos Críticos (Velocidad) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;700;800&display=swap" as="style" />
+    <link rel="preload" href="https://elizabethrugel.com/wp-content/uploads/2025/05/DISENO-WEB-min-1.png" as="image" fetchpriority="high" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Datos Estructurados (SEO Local) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Elizabeth Rugel - Diseño Web Ecuador",
+      "image": "https://elizabethrugel.com/wp-content/uploads/2025/03/LOGO-BLANCO-350.png",
+      "@id": "https://elizabethrugel.com/",
+      "url": "https://elizabethrugel.com/",
+      "telephone": "+593991886726",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Urdesa",
+        "addressLocality": "Guayaquil",
+        "addressRegion": "Guayas",
+        "postalCode": "090150",
+        "addressCountry": "EC"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -2.1706,
+        "longitude": -79.9082
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/elizabetrugel",
+        "https://www.instagram.com/elizabetrugel",
+        "https://www.linkedin.com/in/elizabeth-rugel/"
+      ]
+    }
+    </script>
+
     <script>
       tailwind.config = {
         theme: {
@@ -42,6 +110,8 @@
       body {
         background-color: #050505;
         color: #fff;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
       }
       .text-outline {
         -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
@@ -51,7 +121,6 @@
          -webkit-text-stroke: 1px #E60000;
          color: transparent;
       }
-      /* Custom marquee animations */
       @keyframes marquee {
         0% { transform: translateX(0%); }
         100% { transform: translateX(-100%); }
@@ -67,8 +136,14 @@
       .animate-marquee {
         animation: marquee 20s linear infinite;
       }
-      .pause-on-hover:hover {
-        animation-play-state: paused;
+      /* Optimización de Renderizado */
+      .content-visibility-auto {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 1000px;
+      }
+      /* Mobile touch feedback */
+      .active-scale:active {
+        transform: scale(0.95);
       }
     </style>
 <script type="importmap">
